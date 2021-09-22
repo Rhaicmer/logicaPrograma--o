@@ -1,0 +1,4 @@
+-Professor desculpe o atraso, precisei trabalhar loho esse sabado,mas geralmente eu não trabalho
+-Todos os códigos conforme o sr pediu
+- Tem um video que eu fiz mostrando o funcionamento do codigo principal, 3in1
+-Como o video não tem a montagem do código vou compartilhar com a turma pode ajudar alguém ok. Obg
