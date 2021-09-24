@@ -17,58 +17,52 @@ programa{
 
 
 	funcao body(){
-		cadeia input = ""
-		leia(input)
-		//centralizar palavra
-		rh(input, 20, verdadeiro)//1- palavra  2- quantidade total entre letras e traço 3- centralizado ou nao
-		escreva("\n")
-		rh("oi", 20, verdadeiro)
-		escreva("\n")
-		rh("Adriel", 20, verdadeiro)
-		escreva("\n")
-		rh("Guilherme", 20, verdadeiro)
-		escreva("\n")
-		rh("paralelepípedo", 20, verdadeiro)
-		escreva("\n")
-		//palavra ao canto
-		rh("oi", 20, falso)
-		escreva("\n")
-		rh("Adriel", 20, falso)
-		escreva("\n")
-		rh("Guilherme", 20, falso)
-		escreva("\n")
-		rh("paralelepípedo", 20, falso)
-		escreva("\n")
+		limpa()
+		inteiro nSorteados[10]
+		inteiro somaTotal = 0
+		inteiro somaPares = 0
+		escreva("*****Sorteando Números*****\n")
+
+		//sorteando números
+		para(inteiro x=0; x<10; x++){
+			nSorteados[x] = u.sorteia(0, 200)
+			escreva("Número sorteado ",x+1,": ",nSorteados[x],"\n")
+			somaTotal += nSorteados[x]
+			se(nSorteados[x]%2==0){
+				somaPares+=nSorteados[x]
+			}
+		}
+
+		//Média dos números e soma dos npumeros pares
+		escreva("\nA média dos números sorteados é: ",somaTotal/10,"\n",
+		        "A soma dos numeros pares é: ",somaPares,"\n"
+		        )
+		
+		//números impares
+		escreva("\n*****Números Ímpares*****\n")
+		para(inteiro x=0; x<10; x++){
+			se(nSorteados[x]%2==1)
+			escreva("Número  ",x+1,": ",nSorteados[x],"\n")
+		}
+
+		//Lista de números pares
+		escreva("\n*****Numeros Pares*****\n")
+		para(inteiro x=0; x<10; x++){
+			se(nSorteados[x]%2==0)
+			escreva("Número  ",x+1,": ",nSorteados[x],"\n")
+		}
+
+		
 	}
 	
-	funcao  rh(cadeia string, inteiro length, logico center){
-		inteiro nCaracter = t.numero_caracteres(string)
-		inteiro nTrac = length - nCaracter
-		se(center){
-			
-			para(inteiro x=0; x <nTrac/2; x++){
-				escreva("-")
-			}
-			escreva(string)
-			para(inteiro x=0; x <length-(nCaracter+nTrac/2); x++){
-				escreva("-")
-			}
-			
-		}
-		senao{
-			escreva(string)
-			para(inteiro x=0; x < nTrac ; x++){
-				escreva("-")
-			}
-		}
-	}
+
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 286; 
+ * @POSICAO-CURSOR = 1229; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

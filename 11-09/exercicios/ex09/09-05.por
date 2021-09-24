@@ -39,6 +39,12 @@ programa{
                	g.desenhar_texto(600, 70+(x*40), "R$")
                	g.desenhar_texto(635, 70+(x*40), t.real_para_cadeia(vlr[x]*qtd[x]) )
                }
+               real total = 0.0
+               escreva("O valor todal dos produtos desta lista é: R$")
+               para(inteiro x=1; x<11; x++){
+               	total += vlr[x]*qtd[x]
+               }
+               escreva(total)
                
 			g.renderizar()
 			escreva("\n\nDeseja continuar?")
@@ -63,8 +69,7 @@ programa{
 			limpa()
 		}
 
-		escreva("******LISTA COMPLETA******")
-		escreva("Produto     Quantidade     valor unitário      valor total")
+		
 		
 	}
 }
@@ -73,7 +78,7 @@ programa{
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1417; 
+ * @POSICAO-CURSOR = 1711; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
