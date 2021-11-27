@@ -62,8 +62,8 @@ while(prog):
             print("=", end=" ") 
 
 
-        numAp = sample(range(1, 51), k=5)
-        numSor = sample(range(1, 51), k=5)
+        numAp = sample(range(1, 61), k=5)
+        numSor = sample(range(1, 61), k=5)
         print("\nNúmeros apostados: ",end="")
         for _ in numAp:
             print(_, " ", end="")
